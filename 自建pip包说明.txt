@@ -1,0 +1,16 @@
+在pypi.org注册账号
+在github上建代码仓库
+在pypi.org上新建包，起包名
+
+安装pip install wheel
+安装pip install twine
+
+下面三个命令生成dist/x.tar.gz和x.whl
+python setup.py build
+python setup.py sdist
+python setup.py sdist bdist_wheel
+
+上传到pypi
+twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+twine upload dist/*   升级前删除dist里的旧版本
+twine upload -u boiciy -p Qe31qaz1qaz dist/*
